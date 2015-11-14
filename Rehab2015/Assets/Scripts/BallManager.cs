@@ -38,7 +38,10 @@ public class BallManager : MonoBehaviour {
 			ball.transform.position = spawnPosition;
 			ball.setVelocity(startingVelocity);
 
-			
+			if(this.ThrownBalls != null)
+            {
+                this.ThrownBalls.AddValue();
+            }
 		}
 	}
 

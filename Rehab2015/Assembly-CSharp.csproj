@@ -77,12 +77,14 @@
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\BallManager.cs" />
      <Compile Include="Assets\Scripts\BallType.cs" />
+     <Compile Include="Assets\Scripts\ScoreBoardAdd.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseHand.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseHandsController.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseInputTest.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseObjectController.cs" />
      <Compile Include="Assets\SixenseInput\Scripts\SixenseInput.cs" />
      <Compile Include="Assets\SixenseInput\Scripts\SixensePlugin.cs" />
+     <None Include="Assets\Prefabs\Shaders\3DText Layer.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
      <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
