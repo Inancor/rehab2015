@@ -1,0 +1,39 @@
+Mono path[0] = 'D:/Unity Projects/Rehab2015/Rehab2015/Bin/Debug/Rehab2015_Data/Managed'
+Mono path[1] = 'D:/Unity Projects/Rehab2015/Rehab2015/Bin/Debug/Rehab2015_Data/Mono'
+Mono config path = 'D:/Unity Projects/Rehab2015/Rehab2015/Bin/Debug/Rehab2015_Data/Mono/etc'
+PlayerConnection initialized from D:/Unity Projects/Rehab2015/Rehab2015/Bin/Debug/Rehab2015_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55415
+Multi-casting "[IP] 10.0.1.133 [Port] 55415 [Flags] 2 [Guid] 2164178532 [EditorId] 3990691998 [Version] 1048832 [Id] WindowsPlayer(Connor-Laptop) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.0.1.133:55415]
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+[VRDevice] Successfully created device oculus.
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 880M    (ID=0x1198)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.043 seconds
+desktop: 1920x1080 120Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\Unity Projects\Rehab2015\Rehab2015\Bin\Debug\Rehab2015_Data\Managed\System.dll (this message is harmless)
+11/14/15 09:16:13: [CAPI] LibOVR module is located at C:\Windows\SYSTEM32\LibOVRRT32_0_7.dll
+
+ 
+(Filename: C:/buildslave/unity/build/Runtime/VR/Oculus/VRDeviceOculus.cpp Line: 46)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 42e0 -> priority: 1 
+  Thread -> id: 42f8 -> priority: 1 
