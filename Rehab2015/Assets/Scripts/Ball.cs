@@ -1,7 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ball : MonoBehaviour {
+public class Ball : MonoBehaviour
+{
+	public static BallType[] ballTypes = 
+	{
+		new BallType("CubeBall/CubeBall", "sound/sound", "sound/sound"),
+		new BallType("CylinderBall/CylinderBall", "sound/sound", "sound/sound")
+	};
+
+	public BallType BallType;
 
 	private Vector3 gravity = new Vector3(0, -0.0075f, 0);
 
@@ -13,16 +21,19 @@ public class Ball : MonoBehaviour {
 	{
 		string modelName;
 
-		if (Random.value < 0.5)
-		{
-			modelName = "CubeBall/CubeBall";
-		}
-		else
-		{
-			modelName = "CylinderBall/CylinderBall";
-		}
+		//if (Random.value < 0.5)
+		//{
+		//	modelName = "CubeBall/CubeBall";
+		//}
+		//else
+		//{
+		//	modelName = "CylinderBall/CylinderBall";
+		//}
 
-		GameObject modelInstance = Instantiate(Resources.Load(modelName, typeof(GameObject))) as GameObject;
+		int ballTypeIndex = (int)(Random.value * ballTypes.Length);
+		BallType = ballTypes[ballTypeIndex];
+
+		GameObject modelInstance = Instantiate(Resources.Load(BallType.ModelName, typeof(GameObject))) as GameObject;
 		modelInstance.transform.SetParent(this.transform, false);
 	}
 
@@ -50,4 +61,6 @@ public class Ball : MonoBehaviour {
 	{
 		this.velocity = velocity;
 	}
+
 }
+

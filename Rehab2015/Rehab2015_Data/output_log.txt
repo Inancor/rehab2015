@@ -16,12 +16,18 @@ Loading G:\Personal\Programming\Unity\Rehab2015\Rehab2015\Rehab2015_Data\Managed
 Platform assembly: G:\Personal\Programming\Unity\Rehab2015\Rehab2015\Rehab2015_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading G:\Personal\Programming\Unity\Rehab2015\Rehab2015\Rehab2015_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: G:\Personal\Programming\Unity\Rehab2015\Rehab2015\Rehab2015_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.099 seconds
+- Completed reload, in  0.106 seconds
 desktop: 1920x1200 60Hz; virtual: 1920x1200 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: G:\Personal\Programming\Unity\Rehab2015\Rehab2015\Rehab2015_Data\Managed\System.dll (this message is harmless)
+Script error: OnTriggerEnter
+This message parameter has to be of type: Collider
+The message will be ignored.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoScriptCache.cpp Line: 259)
+
 [VRDevice] Initialization of device oculus failed.
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1a04 -> priority: 1 
+  Thread -> id: 1660 -> priority: 1 

@@ -114,5 +114,22 @@ public class SixenseHand : MonoBehaviour
 	{
 		get { return m_initialPosition; }
 	}
+
+
+	void OnTriggerEnter(Collider collision)
+	{
+
+		//this.transform.localScale = this.transform.localScale * 2;
+
+		//Debug.LogError("Collided with " + collision.gameObject.name + " at " + Time.frameCount);
+		//foreach (ContactPoint contact in collision.contacts)
+		//{
+		//	Debug.DrawRay(contact.point, contact.normal, Color.white);
+		//}
+		//if (collision.relativeVelocity.magnitude > 2)
+		//	audio.Play();
+
+		Destroy(collision.gameObject);
+	}
 }
 

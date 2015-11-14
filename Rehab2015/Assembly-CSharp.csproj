@@ -75,6 +75,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\BallManager.cs" />
+     <Compile Include="Assets\Scripts\BallType.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseHand.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseHandsController.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseInputTest.cs" />
