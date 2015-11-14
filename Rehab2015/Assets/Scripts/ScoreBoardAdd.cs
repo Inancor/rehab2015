@@ -3,15 +3,18 @@ using System.Collections;
 
 public class ScoreBoardAdd : MonoBehaviour {
 
-    public TextMesh Score;
+    public TextMesh ScoreboardBallsThrown;
+    private int count = 0;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Start()
+    {
+        this.count--;
+        this.AddValue();
+    }
+
+	public void AddValue()
+    {
+        count++;
+        this.ScoreboardBallsThrown.text = this.count.ToString();
+    }
 }
