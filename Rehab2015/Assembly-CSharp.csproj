@@ -75,9 +75,12 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
      <Compile Include="Assets\Prefabs\Utilities\FreeLook.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
+     <Compile Include="Assets\Scripts\BallComponent.cs" />
      <Compile Include="Assets\Scripts\BallManager.cs" />
      <Compile Include="Assets\Scripts\BallType.cs" />
+     <Compile Include="Assets\Scripts\CollisionSound.cs" />
      <Compile Include="Assets\Scripts\ScoreBoardAdd.cs" />
+     <Compile Include="Assets\Scripts\Test_PrefabArray.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseHand.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseHandsController.cs" />
      <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseInputTest.cs" />

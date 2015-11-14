@@ -8,7 +8,7 @@ public class BallManager : MonoBehaviour {
 		
 	}
 
-	public Ball spawnObject;
+	public BallComponent spawnObject;
 	public Vector3 spawnCentre;
 	public float spawnRadius;
 	public Vector3 startingVelocity;
@@ -16,7 +16,7 @@ public class BallManager : MonoBehaviour {
 
     public ScoreBoardAdd ThrownBalls;
 
-	private float timeUntilNextBall = 0;
+	private float timeUntilNextBall = 2;
 
 
 	// Update is called once per frame
@@ -34,9 +34,10 @@ public class BallManager : MonoBehaviour {
 			Vector3 spawnPosition = new Vector3(x, y, z);
 			//Instantiate(spawnObject, spawnPosition, Quaternion.identity);
 
-			Ball ball = Instantiate<Ball>(spawnObject);
-			ball.transform.position = spawnPosition;
-			ball.setVelocity(startingVelocity);
+            //BallComponent ball = Instantiate<BallComponent>(spawnObject);
+            spawnObject.Create(spawnPosition, startingVelocity);
+            //ball.transform.position = spawnPosition;
+			//ball.setVelocity(startingVelocity);
 
 			if(this.ThrownBalls != null)
             {
