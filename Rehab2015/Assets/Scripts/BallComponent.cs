@@ -31,7 +31,9 @@ public class BallComponent : MonoBehaviour
         modelInstance = Instantiate(ball);
         modelInstance.transform.SetParent(this.transform, false);
 
-        this.startSpace = this.transform.position;
+        this.startSpace = modelInstance.transform.position;
+
+        Debug.Log("Ball start point: " + this.startSpace);
 
         //GetComponentInParent<AudioSource>().PlayOneShot(    )
         playLaunchSound();
@@ -47,13 +49,14 @@ public class BallComponent : MonoBehaviour
 		velocity = velocity * 0.999f;
 
 		//this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - 0.04f);
-		this.transform.position = this.transform.position + velocity;
+		modelInstance.transform.position = this.transform.position + velocity;
 
 
-		this.transform.Rotate(tumble.eulerAngles);
+        modelInstance.transform.Rotate(tumble.eulerAngles);
 
-		if (Vector3.Distance(this.transform.position, this.startSpace) > this.killRadius)
+        if (Vector3.Distance(modelInstance.transform.position, this.startSpace) > this.killRadius)
 		{
+            Debug.Log("Destroying ball");
 			Destroy(this.modelInstance);
 		}
 	}

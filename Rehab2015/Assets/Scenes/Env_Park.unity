@@ -404,20 +404,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100036, guid: 654c0e43b7f82bb4182c007b3c98ca2f, type: 3}
   m_PrefabInternal: {fileID: 1338913239}
---- !u!114 &215258760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215258759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9def2d9b274772442bd45562551f0c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cannonballs:
-  - {fileID: 100000, guid: f324825313609405c900d502e8d563f2, type: 2}
-  - {fileID: 100000, guid: b617cd1d57d9c42b992082c16be92235, type: 2}
 --- !u!114 &215258761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,7 +419,7 @@ MonoBehaviour:
   spawnCentre: {x: 0, y: 0, z: 0}
   spawnRadius: 0
   startingVelocity: {x: 0, y: 0, z: 0}
-  ballDelay: 0
+  ballDelay: 1
   ThrownBalls: {fileID: 444334654}
 --- !u!1 &240836605
 GameObject:
@@ -891,9 +877,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 374248363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b19442926a98154781de80c2564630d, type: 3}
+  m_Script: {fileID: 11500000, guid: 306afb1a44d2b8446b9e4a122789c6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballPrefabs:
+  - {fileID: 158828, guid: 1da07b473ca8f804d999ca6335233d2e, type: 2}
+  - {fileID: 117302, guid: 8c679841f1a51ec429e324d0fe5348ca, type: 2}
+  killRadius: 1
 --- !u!4 &374248365
 Transform:
   m_ObjectHideFlags: 0
@@ -1961,7 +1951,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 90, y: 3, z: 53}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2078344100}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &859114031
@@ -4225,6 +4216,104 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2064917895}
   m_Mesh: {fileID: 4300086, guid: befea35f73a628b4a884a415234457cf, type: 3}
+--- !u!1 &2078344098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2078344100}
+  - 82: {fileID: 2078344099}
+  m_Layer: 0
+  m_Name: BallSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2078344099
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078344098}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!4 &2078344100
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078344098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 859114030}
+  m_RootOrder: 0
 --- !u!1 &2083063471
 GameObject:
   m_ObjectHideFlags: 0
