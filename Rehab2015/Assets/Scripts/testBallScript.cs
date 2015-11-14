@@ -3,6 +3,7 @@ using System.Collections;
 
 public class testBallScript : MonoBehaviour {
 
+    public Vector3 CannonForce;
     private Rigidbody rb;
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,8 @@ public class testBallScript : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        float moveHorizontal =
+
+        //rb.AddForce(CannonForce, Impulse);
+        rb.AddForce(CannonForce);
     }
 }
