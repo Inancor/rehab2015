@@ -14,6 +14,8 @@ public class BallManager : MonoBehaviour {
 	public Vector3 startingVelocity;
 	public float ballDelay;
 
+    public ScoreBoardAdd ThrownBalls;
+
 	private float timeUntilNextBall = 0;
 
 
