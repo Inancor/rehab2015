@@ -35,6 +35,10 @@ public class BallManager : MonoBehaviour {
 			Ball ball = Instantiate<Ball>(spawnObject);
 			ball.transform.position = spawnPosition;
 			ball.setVelocity(startingVelocity);
+
+			
 		}
 	}
+
+	
 }
