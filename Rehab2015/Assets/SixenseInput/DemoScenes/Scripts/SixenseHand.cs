@@ -118,7 +118,19 @@ public class SixenseHand : MonoBehaviour
 
 	void OnTriggerEnter(Collider collision)
 	{
+		AudioSource audioSource = collision.gameObject.GetComponentInParent<AudioSource>();
+		Ball ball = collision.gameObject.GetComponentInParent<Ball>();
 
+		//Debug.Log("ball = " + ball);
+		//Debug.Log("ball.BallType = " + ball.BallType);
+		//Debug.Log("ball.BallType.CatchSound = " + ball.BallType.CatchSound);
+
+		//AudioClip audioClip = Resources.Load<AudioClip>(ball.BallType.CatchSound);
+		//AudioClip audioClip = Resources.Load(ball.BallType.CatchSound, AudioClip);
+
+		ball.playCatchSound();
+
+		//audioSource.PlayOneShot(audioClip);
 		//this.transform.localScale = this.transform.localScale * 2;
 
 		//Debug.LogError("Collided with " + collision.gameObject.name + " at " + Time.frameCount);

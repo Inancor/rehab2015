@@ -5,8 +5,8 @@ public class Ball : MonoBehaviour
 {
 	public static BallType[] ballTypes = 
 	{
-		new BallType("CubeBall/CubeBall", "sound/sound", "sound/sound"),
-		new BallType("CylinderBall/CylinderBall", "sound/sound", "sound/sound")
+		new BallType("CubeBall/CubeBall", "CubeBall/CubeBallSound", "CubeBall/CubeBallSound"),
+		new BallType("CylinderBall/CylinderBall", "CylinderBall/CylinderBallSound", "CylinderBall/CylinderBallSound")
 	};
 
 	public BallType BallType;
@@ -35,6 +35,9 @@ public class Ball : MonoBehaviour
 
 		GameObject modelInstance = Instantiate(Resources.Load(BallType.ModelName, typeof(GameObject))) as GameObject;
 		modelInstance.transform.SetParent(this.transform, false);
+
+		//GetComponentInParent<AudioSource>().PlayOneShot(    )
+		playLaunchSound();
 	}
 
 	// Update is called once per frame
@@ -62,5 +65,14 @@ public class Ball : MonoBehaviour
 		this.velocity = velocity;
 	}
 
+	public void playLaunchSound()
+	{
+		GetComponent<AudioSource>().PlayOneShot(BallType.launchAudioClip);
+	}
+
+	public void playCatchSound()
+	{
+		GetComponent<AudioSource>().PlayOneShot(BallType.catchAudioClip);
+	}
 }
 
