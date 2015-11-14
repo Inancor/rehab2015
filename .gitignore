@@ -30,3 +30,6 @@ obj/
 ehthumbs.db
 Thumbs.db
 Rehab2015.zip
+Rehab2015/Assets/OVR/Meshes/Cone.obj.meta
+Rehab2015/Assets/Plugins/x86/OVRGamepad.dll.meta
+Rehab2015/Assets/Plugins/x86_64/OVRGamepad.dll.meta
