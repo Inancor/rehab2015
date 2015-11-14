@@ -5,7 +5,7 @@ public class BallManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 
 	public Ball spawnObject;
