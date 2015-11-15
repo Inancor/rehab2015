@@ -30,7 +30,7 @@ public class Ball : MonoBehaviour
 	{
 		audioSource = this.gameObject.AddComponent<AudioSource>();
 
-		GetComponent<Rigidbody>().AddForce(new Vector3(0f, 100f, -100f));
+		//GetComponent<Rigidbody>().AddForce(new Vector3(0f, 100f, -100f));
 
 		playLaunchSound();
 	}
