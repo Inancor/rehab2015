@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3331766}
   - 65: {fileID: 6561348}
   - 23: {fileID: 2390930}
-  - 114: {fileID: 11467856}
   - 114: {fileID: 11468026}
   m_Layer: 0
   m_Name: CubeBall
@@ -75,18 +74,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11467856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c91bd91e61cef4a92e61340bf761f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollideSound: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
 --- !u!114 &11468026
 MonoBehaviour:
   m_ObjectHideFlags: 1

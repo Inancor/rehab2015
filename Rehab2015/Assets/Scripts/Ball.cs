@@ -5,8 +5,15 @@ public class Ball : MonoBehaviour
 {
 	public static BallType[] ballTypes = 
 	{
-		new BallType("CubeBall/CubeBall"),
-		new BallType("CylinderBall/CylinderBall")
+		//new BallType("CubeBall/CubeBall"),
+		//new BallType("CylinderBall/CylinderBall"),
+		new BallType("BakeryItems/Cake"),
+		new BallType("BakeryItems/Donuts"),
+		new BallType("BakeryItems/Hambuger"),
+		new BallType("BakeryItems/HamEgg"),
+		new BallType("BakeryItems/IceCream"),
+		new BallType("BakeryItems/Milk"),
+		new BallType("BakeryItems/Waffle")
 	};
 
 	public static Ball getNewRandomBall()
@@ -23,6 +30,7 @@ public class Ball : MonoBehaviour
 
 	private AudioSource audioSource;
 	private float timeLeft = 15f;
+	private bool caught = false;
 
 	//public BallType BallType;
 
@@ -58,9 +66,12 @@ public class Ball : MonoBehaviour
 		audioSource.PlayOneShot(launchAudio);
 	}
 
-	public void playCatchSound()
+	public bool playCatchSound()
 	{
+		bool wasCaught = caught;
+		caught = true;
 		audioSource.PlayOneShot(catchAudio);
+		return wasCaught;
 	}
 }
 

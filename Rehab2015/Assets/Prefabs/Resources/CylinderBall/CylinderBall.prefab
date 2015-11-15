@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3317010}
   - 136: {fileID: 13646278}
   - 23: {fileID: 2345242}
-  - 114: {fileID: 11476020}
   - 114: {fileID: 11439320}
   m_Layer: 0
   m_Name: CylinderBall
@@ -76,18 +75,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchAudio: {fileID: 8300000, guid: 4d6d816408e48e7428e863203522508f, type: 3}
   catchAudio: {fileID: 8300000, guid: 5802cc242c56cfa47a4b9ac4bb747662, type: 3}
---- !u!114 &11476020
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 158828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c91bd91e61cef4a92e61340bf761f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollideSound: {fileID: 8300000, guid: 4d6d816408e48e7428e863203522508f, type: 3}
 --- !u!136 &13646278
 CapsuleCollider:
   m_ObjectHideFlags: 1

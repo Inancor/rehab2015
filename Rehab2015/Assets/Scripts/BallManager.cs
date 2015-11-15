@@ -8,6 +8,7 @@ public class BallManager : MonoBehaviour
 	//public float spawnRadius;
 	public float ballDelay;
 	public Vector3 fireVector;
+	public AudioClip fireSound;
 
 	private float timeUntilNextBall;
 
@@ -31,10 +32,26 @@ public class BallManager : MonoBehaviour
 			ball.transform.position = spawnPosition;
 			if (ball.GetComponent<Rigidbody>() == null)
 				ball.gameObject.AddComponent<Rigidbody>();
-			ball.GetComponent<Rigidbody>().AddForce(fireVector);
+
+			Vector3 currentFireVector = new Vector3(fireVector.x, fireVector.y, fireVector.z);
+			float randomValue = Random.value;
+			Debug.Log("randomValue = " + randomValue);
+			if (randomValue < 0.5f)
+			{
+				currentFireVector.x = currentFireVector.x + 10;
+			}
+			Debug.Log("currentFireVector = " + currentFireVector);
+			ball.GetComponent<Rigidbody>().AddForce(currentFireVector);
 
 			GameObject fireball = this.transform.parent.FindChild("Fireball").gameObject;
 			fireball.GetComponent<ParticleSystem>().Play();
+
+			GetComponent<ScoreBoardAdd>().AddValue();
+
+			if (fireSound != null)
+			{
+				GetComponent<AudioSource>().PlayOneShot(fireSound);
+			}
 		}
 	}
 

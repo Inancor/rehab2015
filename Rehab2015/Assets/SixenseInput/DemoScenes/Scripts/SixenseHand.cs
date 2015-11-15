@@ -129,12 +129,17 @@ public class SixenseHand : MonoBehaviour
 
 		if (ball != null)
 		{
-			ball.playCatchSound();
+			if (!ball.playCatchSound())
+			{
+				transform.parent.GetComponent<ScoreBoardAdd>().AddValue();
+			}
+
 			//ball.GetComponent<Rigidbody>().velocity = new Vector3(0, -500, 500);
 			ball.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 100));
 		}
 
 		Debug.Log("collision = " + collision);
+
 	}
 }
 
