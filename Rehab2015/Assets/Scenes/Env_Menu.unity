@@ -1411,9 +1411,10 @@ GameObject:
   - 4: {fileID: 100705071}
   - 23: {fileID: 100705073}
   - 102: {fileID: 100705072}
+  - 65: {fileID: 100705074}
   m_Layer: 0
-  m_Name: Text (3)
-  m_TagString: Untagged
+  m_Name: ButtonUp
+  m_TagString: MenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1477,6 +1478,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &100705074
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100705070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 17.9999981, z: 1.56462523e-08}
+  m_Center: {x: 4.25, y: -4.5, z: 0}
 --- !u!1 &101141129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,9 +2430,10 @@ GameObject:
   - 4: {fileID: 211393194}
   - 23: {fileID: 211393196}
   - 102: {fileID: 211393195}
+  - 65: {fileID: 211393197}
   m_Layer: 0
-  m_Name: Text (3)
-  m_TagString: Untagged
+  m_Name: ButtonUp
+  m_TagString: MenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2431,7 +2445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 211393193}
   m_LocalRotation: {x: 2.66316192e-07, y: 2.53319712e-07, z: -7.81596942e-14, w: 1}
-  m_LocalPosition: {x: -80.2900009, y: 7.21000004, z: 306.26001}
+  m_LocalPosition: {x: -80.2900009, y: 7.21000004, z: 306.251007}
   m_LocalScale: {x: .370979071, y: .0991813838, z: 3.15427732}
   m_Children: []
   m_Father: {fileID: 626498754}
@@ -2483,6 +2497,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &211393197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 211393193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.39999962, y: 18, z: 1.95580951e-09}
+  m_Center: {x: 4.19999981, y: -4, z: 9.77872783e-10}
 --- !u!1 &212090376
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,8 +4647,9 @@ GameObject:
   - 4: {fileID: 437391694}
   - 23: {fileID: 437391696}
   - 102: {fileID: 437391695}
+  - 114: {fileID: 437391697}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: DifficultyNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4687,6 +4714,24 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &437391697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 437391693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9810aecd74c074baba594e1b404d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CycleBackButton: {fileID: 211393197}
+  CycleForwardButton: {fileID: 2124962474}
+  Options:
+  - 1
+  - 2
+  - 3
+  - 4
 --- !u!1 &443597425
 GameObject:
   m_ObjectHideFlags: 0
@@ -6733,9 +6778,10 @@ GameObject:
   - 4: {fileID: 653236311}
   - 23: {fileID: 653236313}
   - 102: {fileID: 653236312}
+  - 65: {fileID: 653236314}
   m_Layer: 0
-  m_Name: Text (4)
-  m_TagString: Untagged
+  m_Name: ButtonDown
+  m_TagString: MenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6799,6 +6845,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &653236314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653236310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.40000057, y: 17.9999981, z: 1.56462363e-08}
+  m_Center: {x: 4.19993925, y: -4, z: -6.68354323e-06}
 --- !u!1 &654080262
 GameObject:
   m_ObjectHideFlags: 0
@@ -8625,6 +8683,7 @@ GameObject:
   - 81: {fileID: 859114026}
   - 114: {fileID: 859114031}
   - 82: {fileID: 859114032}
+  - 114: {fileID: 859114033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8787,6 +8846,18 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &859114033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859114025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d8828703780b540b719e230a9761f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEvent: 
 --- !u!1 &862799251
 GameObject:
   m_ObjectHideFlags: 0
@@ -9010,7 +9081,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886008079}
-  m_Text: DIFFICUTLY
+  m_Text: DIFFICULTY
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -13153,9 +13224,10 @@ GameObject:
   - 4: {fileID: 1393136431}
   - 23: {fileID: 1393136433}
   - 102: {fileID: 1393136432}
+  - 65: {fileID: 1393136434}
   m_Layer: 0
   m_Name: Text (1)
-  m_TagString: Untagged
+  m_TagString: MenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13221,6 +13293,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &1393136434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1393136430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 38, y: 30, z: 5.34579598e-08}
+  m_Center: {x: 14.3500023, y: -11.9999962, z: 1.33247113e-05}
 --- !u!1 &1393442890
 GameObject:
   m_ObjectHideFlags: 0
@@ -13741,8 +13825,9 @@ GameObject:
   - 4: {fileID: 1482623189}
   - 23: {fileID: 1482623191}
   - 102: {fileID: 1482623190}
+  - 114: {fileID: 1482623192}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: RangeOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13807,6 +13892,23 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1482623192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482623188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9810aecd74c074baba594e1b404d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CycleBackButton: {fileID: 100705074}
+  CycleForwardButton: {fileID: 653236314}
+  Options:
+  - Left
+  - Right
+  - All
 --- !u!1 &1483700903
 GameObject:
   m_ObjectHideFlags: 0
@@ -19223,9 +19325,10 @@ GameObject:
   - 4: {fileID: 2124704691}
   - 23: {fileID: 2124704693}
   - 102: {fileID: 2124704692}
+  - 65: {fileID: 2124704694}
   m_Layer: 0
   m_Name: Text (1)
-  m_TagString: Untagged
+  m_TagString: MenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19291,6 +19394,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &2124704694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124704690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 38, y: 30, z: 5.34580025e-08}
+  m_Center: {x: 14.3500004, y: -12.0000038, z: 7.60266539e-06}
 --- !u!1 &2124962470
 GameObject:
   m_ObjectHideFlags: 0
@@ -19301,9 +19416,10 @@ GameObject:
   - 4: {fileID: 2124962471}
   - 23: {fileID: 2124962473}
   - 102: {fileID: 2124962472}
+  - 65: {fileID: 2124962474}
   m_Layer: 0
-  m_Name: Text (4)
-  m_TagString: Untagged
+  m_Name: ButtonDown
+  m_TagString: MenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19367,6 +19483,18 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!65 &2124962474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124962470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.40000057, y: 18, z: 6.39488462e-14}
+  m_Center: {x: 4.19990873, y: -4, z: 7.62939453e-06}
 --- !u!1 &2130818568
 GameObject:
   m_ObjectHideFlags: 0
