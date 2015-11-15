@@ -22,12 +22,18 @@ public class Ball : MonoBehaviour
 	public AudioClip catchAudio;
 
 	private AudioSource audioSource;
+	private float timeLeft = 15f;
 
 	//public BallType BallType;
 
 	// Use this for initialization
 	void Start ()
 	{
+
+		this.GetComponent<Rigidbody>().drag = 0.45f;
+		this.GetComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;
+		this.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+
 		audioSource = this.gameObject.AddComponent<AudioSource>();
 
 		//GetComponent<Rigidbody>().AddForce(new Vector3(0f, 100f, -100f));
@@ -36,9 +42,12 @@ public class Ball : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+		timeLeft -= Time.deltaTime;
 
-		if (transform.position.z < -2)
+		//if (transform.position.z < -2)
+		if (timeLeft < 0)
 		{
 			Destroy(this.gameObject);
 		}

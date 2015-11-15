@@ -29,7 +29,12 @@ public class BallManager : MonoBehaviour
 			//Ball ball = Instantiate<Ball>(spawnObject);
 			Ball ball = Ball.getNewRandomBall();
 			ball.transform.position = spawnPosition;
+			if (ball.GetComponent<Rigidbody>() == null)
+				ball.gameObject.AddComponent<Rigidbody>();
 			ball.GetComponent<Rigidbody>().AddForce(fireVector);
+
+			GameObject fireball = this.transform.parent.FindChild("Fireball").gameObject;
+			fireball.GetComponent<ParticleSystem>().Play();
 		}
 	}
 

@@ -118,9 +118,23 @@ public class SixenseHand : MonoBehaviour
 
 	void OnTriggerEnter(Collider collision)
 	{
-		Ball ball = collision.gameObject.GetComponentInParent<Ball>();
-		ball.playCatchSound();
+		Debug.Log("collided with " + collision.gameObject.name);
+
 		//Destroy(collision.gameObject);
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		Ball ball = collision.gameObject.GetComponentInParent<Ball>();
+
+		if (ball != null)
+		{
+			ball.playCatchSound();
+			//ball.GetComponent<Rigidbody>().velocity = new Vector3(0, -500, 500);
+			ball.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 100));
+		}
+
+		Debug.Log("collision = " + collision);
 	}
 }
 
