@@ -77,5 +77,7 @@ public class BallComponent : MonoBehaviour
 		//GetComponent<AudioSource>().PlayOneShot(BallType.catchAudioClip);
         Camera.main.GetComponent<AudioSource>().PlayOneShot(ball.GetComponent<CollisionSound>().CollideSound);
 	}
+
+	//test
 }
 

@@ -11,8 +11,9 @@ GameObject:
   - 33: {fileID: 3331766}
   - 65: {fileID: 6561348}
   - 23: {fileID: 2390930}
-  - 54: {fileID: 5451106}
   - 114: {fileID: 11467856}
+  - 114: {fileID: 11468026}
+  - 54: {fileID: 5409670}
   m_Layer: 0
   m_Name: CubeBall
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5451106
+--- !u!54 &5409670
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -73,9 +74,9 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6561348
@@ -102,6 +103,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollideSound: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
+--- !u!114 &11468026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b19442926a98154781de80c2564630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchAudio: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
+  catchAudio: {fileID: 8300000, guid: fecc3e7a0166a104cb810435f6fdf37b, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -137,6 +151,18 @@ Prefab:
       propertyPath: CollideSound
       value: 
       objectReference: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: launchAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
+    - target: {fileID: 0}
+      propertyPath: catchAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: fecc3e7a0166a104cb810435f6fdf37b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 117302}

@@ -5,54 +5,38 @@ public class Ball : MonoBehaviour
 {
 	public static BallType[] ballTypes = 
 	{
-		new BallType("CubeBall/CubeBall", "CubeBall/CubeBallSound", "CubeBall/CubeBallSound"),
-		new BallType("CylinderBall/CylinderBall", "CylinderBall/CylinderBallSound", "CylinderBall/CylinderBallSound")
+		new BallType("CubeBall/CubeBall"),
+		new BallType("CylinderBall/CylinderBall")
 	};
 
-	public BallType BallType;
+	public static Ball getNewRandomBall()
+	{
+		int ballTypeIndex = (int)(Random.value * ballTypes.Length);
+		BallType ballType = ballTypes[ballTypeIndex];
+		GameObject modelInstance = Instantiate(Resources.Load(ballType.ModelName, typeof(GameObject))) as GameObject;
+		Ball ball = modelInstance.GetComponent<Ball>();
+		return ball;
+	}
 
-	private Vector3 gravity = new Vector3(0, -0.0075f, 0);
+	public AudioClip launchAudio;
+	public AudioClip catchAudio;
 
-	private Vector3 velocity = new Vector3(0, 0, -0.04f);
-	private Quaternion tumble = Quaternion.AngleAxis(1.0f, new Vector3(0.5f, 0.3f, 0.7f));
+	private AudioSource audioSource;
+
+	//public BallType BallType;
 
 	// Use this for initialization
 	void Start ()
 	{
-		string modelName;
+		audioSource = this.gameObject.AddComponent<AudioSource>();
 
-		//if (Random.value < 0.5)
-		//{
-		//	modelName = "CubeBall/CubeBall";
-		//}
-		//else
-		//{
-		//	modelName = "CylinderBall/CylinderBall";
-		//}
+		GetComponent<Rigidbody>().AddForce(new Vector3(0f, 100f, -100f));
 
-		int ballTypeIndex = (int)(Random.value * ballTypes.Length);
-		BallType = ballTypes[ballTypeIndex];
-
-		GameObject modelInstance = Instantiate(Resources.Load(BallType.ModelName, typeof(GameObject))) as GameObject;
-		modelInstance.transform.SetParent(this.transform, false);
-
-		//GetComponentInParent<AudioSource>().PlayOneShot(    )
 		playLaunchSound();
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		Vector3 gravityDelta = gravity * Time.deltaTime;
-
-		//velocity = velocity + new Vector3(0, -0.00015f, 0);
-		velocity = velocity + gravityDelta;
-		velocity = velocity * 0.999f;
-
-		//this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - 0.04f);
-		this.transform.position = this.transform.position + velocity;
-
-		this.transform.Rotate(tumble.eulerAngles);
 
 		if (transform.position.z < -2)
 		{
@@ -60,19 +44,14 @@ public class Ball : MonoBehaviour
 		}
 	}
 
-	public void setVelocity(Vector3 velocity)
-	{
-		this.velocity = velocity;
-	}
-
 	public void playLaunchSound()
 	{
-		GetComponent<AudioSource>().PlayOneShot(BallType.launchAudioClip);
+		audioSource.PlayOneShot(launchAudio);
 	}
 
 	public void playCatchSound()
 	{
-		GetComponent<AudioSource>().PlayOneShot(BallType.catchAudioClip);
+		audioSource.PlayOneShot(catchAudio);
 	}
 }
 
