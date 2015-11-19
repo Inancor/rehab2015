@@ -35,21 +35,25 @@ public class BallManager : MonoBehaviour
 
 			Vector3 currentFireVector = new Vector3(fireVector.x, fireVector.y, fireVector.z);
 			float randomValue = Random.value;
-			Debug.Log("randomValue = " + randomValue);
+			//Debug.Log("randomValue = " + randomValue);
 			if (randomValue < 0.5f)
 			{
 				currentFireVector.x = currentFireVector.x + 10;
 			}
-			Debug.Log("currentFireVector = " + currentFireVector);
+			//Debug.Log("currentFireVector = " + currentFireVector);
 			ball.GetComponent<Rigidbody>().AddForce(currentFireVector);
 
 			GameObject fireball = this.transform.parent.FindChild("Fireball").gameObject;
 			fireball.GetComponent<ParticleSystem>().Play();
+			GameObject smoke = this.transform.parent.FindChild("Smoke").gameObject;
+			smoke.GetComponent<ParticleSystem>().Play();
 
 			GetComponent<ScoreBoardAdd>().AddValue();
 
+			//Debug.Log("considering playing cannon sound");
 			if (fireSound != null)
 			{
+				//Debug.Log("playing cannon sound");
 				GetComponent<AudioSource>().PlayOneShot(fireSound);
 			}
 		}

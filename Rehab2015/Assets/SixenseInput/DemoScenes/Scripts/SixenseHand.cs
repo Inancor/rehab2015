@@ -118,7 +118,7 @@ public class SixenseHand : MonoBehaviour
 
 	void OnTriggerEnter(Collider collision)
 	{
-		Debug.Log("collided with " + collision.gameObject.name);
+		//Debug.Log("collided with " + collision.gameObject.name);
 
 		//Destroy(collision.gameObject);
 	}
@@ -138,7 +138,7 @@ public class SixenseHand : MonoBehaviour
 			ball.GetComponent<Rigidbody>().AddForce(new Vector3(0, -100, 100));
 		}
 
-		Debug.Log("collision = " + collision);
+		//Debug.Log("collision = " + collision);
 
 	}
 }

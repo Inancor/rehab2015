@@ -46,7 +46,7 @@ public class Ball : MonoBehaviour
 
 		//GetComponent<Rigidbody>().AddForce(new Vector3(0f, 100f, -100f));
 
-		playLaunchSound();
+		//playLaunchSound();
 	}
 
 	// Update is called once per frame
